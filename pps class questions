@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <windows.h>
+#include <math.h>
+#include <stdbool.h>
+
+/*
+int swap(int *a, int *b)
+{
+    int temp =*b;
+    *b=*a;
+    *a=temp;
+}
+
+int main()
+{
+   int a=10,b=20;
+   swap(&a,&b);
+   printf("%d=a ,%d=b \n",a,b);
+
+
+    return 0;
+}
+
+
+*/
+
+/*
+int main()
+{
+    float interest,amount,time;
+    printf("It's a simple interest calculator\n");
+    printf("Enter interest , amount , time (with commas in between) of/for Loan :");
+    scanf("%f,%f,%f",&interest,&amount,&time);
+    printf("Total Loan amount :%f$\n",amount);
+    printf("Total interest :%f$\n",((interest*amount*time)/100));
+    printf("Total amount after interest :%f$",((interest*amount*time)/100)+amount);
+
+
+    return 0;
+}
+*/
+
+/*
+int main()
+{
+    int sound;
+    printf("For beep Press 1 :");
+    scanf("%d",&sound);
+
+    if(sound==1)
+    {
+        int frequency,time;
+    printf("Enter frequency(Hz) you wanna hear and for how long(ms) (separated by a comma) :");
+    scanf("%d,%d",&frequency,&time);
+
+    Beep(frequency,time);
+    }
+    else{
+        printf("LOL !!");
+    }
+
+    return 0;
+}
+*/
+
+
+
+
+/*
+int main()
+{
+    printf("%d\n",sizeof(int));
+    printf("%d\n",sizeof(float));
+    printf("%d\n",sizeof(char));
+    printf("%d\n",sizeof(bool));
+    printf("%d\n",sizeof(long));
+    printf("%d\n",sizeof(long long int));
+
+
+
+    return 0;
+}
+*/
