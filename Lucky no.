@@ -1,0 +1,72 @@
+
+#include <stdio.h>
+#include <time.h>
+#include <windows.h>
+
+
+int main()
+{
+    srand(time(NULL));
+    int n=rand()%10+1;
+    int guess=0;
+
+    printf("Not responsible for any paranormal activities.\n\n");
+
+    while(1)
+    {
+    int a;
+    printf("Enter a no.(1-10) if u are lucky u will know :");
+    scanf("%d",&a);
+
+    if(a>n)
+    {
+        guess++;
+        printf("Too high !! \nTotal lifes left : %d \n",3-guess);
+        if(guess==2)
+        {
+            printf("lucky no. times 9 is %d\n",n*9);
+        }
+        if(guess==3)
+        {
+            printf("Lucky no. is %d\n",n);
+            Sleep(2000);
+            printf("\n\nYou have been cursed with eternal bad luck!\n");
+            Beep(500,2000);
+            printf("\nYour PC will never wake up again...\n");
+            Sleep(2000);
+            system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0");
+            return 0;
+        }
+    }
+    else if(a<n)
+    {
+        guess++;
+        printf("Too low !! \nTotal lifes left : %d\n",3-guess);
+        if(guess==2)
+        {
+            printf("lucky no. times 9 is %d\n",n*9);
+        }
+        if(guess==3)
+        {
+            printf("Lucky no. is %d\n",n);
+            Sleep(2000);
+            printf("\nYou have been cursed with eternal bad luck!\n\n");
+            Beep(500,2000);
+            printf("\nYour PC will never wake up again...\n");
+            Sleep(2000);
+            system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0");
+            return 0;
+        }
+    }
+    else{
+        guess++;
+        printf("Lucky no. is %d\n",n);
+        printf("you got it in %d chances!!",guess);
+        break;
+    }
+    }
+
+
+
+    return 0;
+}
