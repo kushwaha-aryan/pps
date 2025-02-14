@@ -1,0 +1,105 @@
+#include <stdio.h>
+#include <math.h>
+
+/*
+int rev(int n)
+{
+    int sum=0;
+    while(n>0)
+    {
+        sum=sum*10+n%10;
+        n/=10;
+    }
+    return sum;   //no need of trailing '0' and in palindrome its not gonna be palindrome
+}
+
+int main()
+{
+    int a;
+    printf("Enter a no. to check if it's a palindrome : ");
+    scanf("%d",&a);
+    if (a < 0) printf("Negative numbers can't be palindromes!!\n");
+    else if(a==rev(a)) printf("palindrome !!\n");
+    else printf("NOT palindrome !!\n");
+
+    return 0;
+}
+
+*/
+
+
+/*
+int main()
+{
+    int a;
+    printf("Enter a no. to check if it's a armstrong : ");
+    scanf("%d",&a);
+
+    int d=a;
+    int digits=0;
+    while(d>0)
+    {
+        digits++;
+        d/=10;
+    }
+
+    double sum=0;
+
+    int b=a;
+
+    while(b>0)
+    {
+        sum+=pow((b%10),digits);
+        b/=10;
+    }
+
+    if(a<0) printf("Negative numbers can't be Armstrong numbers!!\n");
+    else if(a==(int)sum) printf("armstrong !!\n");
+    else printf("NOT armstrong !!\n");
+
+    return 0;
+}
+*/
+
+/*
+int main()
+{
+    int a;
+    printf("Enter a no. to print it in words : ");
+    scanf("%d",&a);
+
+    if (a < 0) {
+        printf("Minus ");
+        a = -a;
+    }
+
+    int d=a;
+    int digits=0;
+    do
+    {
+        digits++;
+        d/=10;
+    }while(d>0);
+
+    for(int i=1;i<=digits;i++)
+    {
+        int c=(a/(int)pow(10,(digits-i)))%10;
+
+
+    if (c == 0) printf("Zero ");
+    else if (c == 1) printf("One ");
+    else if (c == 2) printf("Two ");
+    else if (c == 3) printf("Three ");
+    else if (c == 4) printf("Four ");
+    else if (c == 5) printf("Five ");
+    else if (c == 6) printf("Six ");
+    else if (c == 7) printf("Seven ");
+    else if (c == 8) printf("Eight ");
+    else if (c == 9) printf("Nine ");
+
+
+    }
+
+    return 0;
+}
+*/
