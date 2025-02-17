@@ -1,0 +1,36 @@
+    #include <stdio.h>
+    #include <ctype.h>
+    int main()
+    {
+    int a=11;
+    for(int i=0;i<4;i++)
+    {
+        for(int j=0;j<3-i;j++)
+        {
+            printf("    ");
+        }
+
+        int x=11;
+        int n=11-i;
+        while(1)
+        {
+            if(x%10==x) printf(" 0%d ",x);
+            else printf(" %d ",x);
+            if(x==n) break;
+            x--;
+        }
+
+        while(1)
+        {
+            if(x==11) break;
+            x++;
+            if(x%10==x) printf(" 0%d ",x);
+            else printf(" %d ",x);
+        }
+
+
+        printf("\n");
+    }
+
+    return 0;
+    }
