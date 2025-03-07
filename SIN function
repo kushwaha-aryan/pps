@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <math.h>
+
+/*double fac(int n)
+{
+    double fact=1;
+    for(int i=1;i<=n;i++)
+    {
+        fact*=i;
+    }
+    return fact;
+}
+*/
+
+double sinfunc(double n)
+{
+    double sum=0;
+    double term;
+    int sign=1;
+    int b=1;
+
+    n = fmod(n, 2 * M_PI); //for -pie to pie range
+
+
+    for(int i=0;i<15;i++)
+     {
+//    term=sign*pow(n,b)/fac(b);
+    term=sign*pow(n,b)/tgamma(b+1);
+    sum+=term;
+    sign*=-1;
+    b+=2;
+    if(fabs(term)<1e-6) break;
+    }
+
+    return sum;
+}
+
+int main()
+{
+    double a;
+    printf("Enter n {to find sin(n)} :");
+    scanf("%lf",&a);
+
+    printf("sin(%.3f) : %.9f",a,sinfunc(a));
+
+
+    return 0;
+
+}
