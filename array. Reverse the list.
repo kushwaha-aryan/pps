@@ -1,0 +1,35 @@
+//WAP that takes a list of n elements from the user. Store it in an array. Reverse the list.
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter no of elements : ");
+    scanf("%d",&n);
+
+    int arr[n];
+
+    for(int i=0;i<n;i++)
+    {
+        printf("Enter element at position %d :",i+1);
+        scanf("%d",&arr[i]);
+    }
+    printf("\n\nLIST\n-----------------\n\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("%-8d ",arr[i]);
+    }
+    for(int i=0;i<n/2;i++)
+    {
+        int temp=arr[i];
+        arr[i]=arr[n-i-1];
+        arr[n-i-1]=temp;
+    }
+    printf("\n\nReversed list \n-----------------\n\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("%-8d ",arr[i]);
+    }
+
+}
