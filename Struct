@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+struct emp{
+    char EMP_NAME[20];
+    int EMP_ID;
+    char Department[30];
+    int Salary;
+};
+
+int main() {
+
+   struct emp emp_1={"Ramesh",1,"Computer Science",100000};
+   struct emp emp_2={"Adil",2,"Electronics",100000};
+   struct emp emp_3;
+   strcpy(emp_3.EMP_NAME,"Nobita");
+   strcpy(emp_3.Department,"Overthinking");
+   emp_3.EMP_ID=3;
+   emp_3.Salary=100000;
+
+
+
+   printf("Name : %-10s , Id : %3d\n",emp_1.EMP_NAME,emp_1.EMP_ID);
+   printf("Name : %-10s , Id : %3d\n",emp_2.EMP_NAME,emp_2.EMP_ID);
+   printf("Name : %-10s , ",emp_3.EMP_NAME);
+   printf("Id : %3d\n",emp_3.EMP_ID);
+
+  return 0;
+}
